@@ -3,8 +3,6 @@
 
 using namespace std;
 
-string convert_to_string(int* vector, bool* vector_of_values_used, int min, int max);
-
 void randomly_initialized_vector
 	(int* randomly_init_vector,int* vector, bool* vector_of_values_used, int min, int max) {
 	if (min > max) {
@@ -13,10 +11,8 @@ void randomly_initialized_vector
 		max = t;
 	}
 
-	int min_temp = min < 0 ? -min : min;
-	int max_temp = max < 0 ? -max : max;
 	srand(time(NULL));
-	for (int i = 0; i <= min_temp + max_temp;) {
+	for (int i = min; i <= max;) {
 		int n = rand() % (max - min + 1) + min;
 		int index = 0;
 		for (int j = min; j <= max; j++)

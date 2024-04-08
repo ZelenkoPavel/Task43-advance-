@@ -4,7 +4,7 @@ using namespace std;
 
 void filling_in_the_vectors
 (int* vector, bool* vector_of_values_used, int min, int max);
-string convert_to_string(int* vector, bool* vector_of_values_used, int min, int max);
+string convert_to_string(int* vector, int min, int max);
 void randomly_initialized_vector
 (int* randomly_init_vector, int* vector, bool* vector_of_values_used, int min, int max);
 
@@ -36,13 +36,13 @@ int main() {
 	filling_in_the_vectors(vector, vector_of_values_used, min, max);
 
 	cout << "Vector elements - "
-		 << convert_to_string(vector, vector_of_values_used, min, max) << endl << endl;
+		 << convert_to_string(vector, min, max) << endl << endl;
 
 	randomly_initialized_vector
 	(randomly_init_vector, vector, vector_of_values_used, min, max);
 
 	cout << "elements of a randomly initialized vector:\n"
-		<< convert_to_string(randomly_init_vector, vector_of_values_used, min, max) << endl;
+		<< convert_to_string(randomly_init_vector, min, max) << endl;
 
 	return 0;
 }

@@ -16,7 +16,7 @@ void filling_in_the_vectors
 	}
 }
 
-string convert_to_string(int* vector, bool* vector_of_values_used, int min, int max) {
+string convert_to_string(int* vector, int min, int max) {
 	if (min > max) {
 		int t = min;
 		min = max;
